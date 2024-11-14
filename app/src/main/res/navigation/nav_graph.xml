@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nav xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/onboardFragment">
 
     <fragment
         android:id="@+id/onboardFragment"
         android:name="com.triplet.OnboardFragment"
-        android:label="OnboardFragment"
-        tools:layout="@layout/onboard_fragment">
-        <action
-            android:id="@+id/action_onboardFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+        android:label="OnboardFragment">
         <action
             android:id="@+id/action_onboardFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
@@ -20,12 +16,10 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.triplet.SignUpFragment"
-        android:label="SignUpFragment"
-        tools:layout="@layout/sign_up_fragment">
+        android:label="SignUpFragment">
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment">
-            <!-- Указываем, что при навигации можно передать аргумент user -->
             <argument
                 android:name="user"
                 app:argType="com.triplet.models.User" />
@@ -35,22 +29,27 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.triplet.SignInFragment"
-        android:label="SignInFragment"
-        tools:layout="@layout/sign_in_fragment">
-        <argument
-            android:name="user"
-            app:argType="com.triplet.models.User" />
+        android:label="Sign In">
+
+
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.triplet.models.User" />
+
         <action
             android:id="@+id/action_signInFragment_to_onboardFragment"
             app:destination="@id/onboardFragment" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.triplet.HomeFragment"
-        android:label="HomeFragment"
-        tools:layout="@layout/home_fragment" />
-</nav>
+        android:label="HomeFragment" />
+</navigation>

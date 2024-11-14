@@ -11,14 +11,13 @@ import com.triplet.databinding.OnBoardFragmentBinding
 
 class OnboardFragment : Fragment() {
 
-    private var _binding: OnBoardFragmentBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: OnBoardFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = OnBoardFragmentBinding.inflate(inflater, container, false)
+        binding = OnBoardFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,12 +26,7 @@ class OnboardFragment : Fragment() {
 
         // Переход на SignInFragment по нажатию кнопки
         binding.startBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_onboard_to_signIn)
+            findNavController().navigate(R.id.action_onboardFragment_to_signInFragment)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

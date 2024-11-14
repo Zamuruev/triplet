@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.androidx.nav.safeargs)
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
 
 android {
@@ -34,9 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-//    buildFeatures {
-//        viewBinding = true
-//    }
 
     viewBinding {
         enable = true
@@ -53,13 +50,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.annotation)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.fragment)
+    implementation(libs.kotlinx.serialization.json)
 
     // nav dependencies
-    implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
