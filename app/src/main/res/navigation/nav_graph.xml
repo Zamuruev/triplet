@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardFragment">
+
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.triplet.OnboardFragment"
+        android:label="OnboardFragment">
+        <action
+            android:id="@+id/action_onboardFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.triplet.SignUpFragment"
+        android:label="SignUpFragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment">
+            <argument
+                android:name="user"
+                app:argType="com.triplet.models.User" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.triplet.SignInFragment"
+        android:label="Sign In">
+
+
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.triplet.models.User" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_onboardFragment"
+            app:destination="@id/onboardFragment" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.triplet.HomeFragment"
+        android:label="HomeFragment" />
+</navigation>
