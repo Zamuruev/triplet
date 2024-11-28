@@ -55,6 +55,7 @@ dependencies {
     // nav dependencies
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.datastore.core.android)
 
 
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,5 +68,7 @@ dependencies {
 
     // Coroutines
     implementation(libs.coroutines.android)
+
+    implementation(libs.datastore.preferences)
 
 }

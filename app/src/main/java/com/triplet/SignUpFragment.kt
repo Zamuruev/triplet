@@ -27,7 +27,7 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.signInBtn.setOnClickListener {
-            findNavController().currentBackStackEntry
+           findNavController().navigate(R.id.signInFragment)
         }
 
         binding.submitBtn.setOnClickListener {
@@ -50,7 +50,9 @@ class SignUpFragment : Fragment() {
                 Toast.makeText(requireContext(), "Please fill in all fields correctly.", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

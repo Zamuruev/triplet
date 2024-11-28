@@ -1,0 +1,121 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#010612"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/background_for_login_form"
+        android:padding="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#AE4FC2"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/nicknameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/nicknameInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your username"
+            android:background="@drawable/input_login_selector"
+            android:textColorHint="#8C8686"
+            android:padding="12dp"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/fontSizeLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font size: 16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/fontSizeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            android:min="10"
+            android:progressTint="#D278E6"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveSettingsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Save Settings"
+            android:background="@drawable/form_login_selector"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Back"
+            android:background="@drawable/back_button_start_window"
+            android:textColor="@color/white"
+            android:paddingRight="65dp"
+            android:paddingLeft="65dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete file"
+            android:background="@drawable/back_button_start_window"
+            android:textColor="@color/white"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/restoreFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_button_start_window"
+            android:text="Restore file"
+            android:textColor="@color/white"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/fileStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status file"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>
