@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.androidx.navigation.safeargs)
     alias(libs.plugins.jetbrains.kotlin.serialization)
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -57,7 +59,6 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.datastore.core.android)
 
-
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Retrofit
@@ -70,5 +71,10 @@ dependencies {
     implementation(libs.coroutines.android)
 
     implementation(libs.datastore.preferences)
+
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt(libs.room.compiler)
+
 
 }

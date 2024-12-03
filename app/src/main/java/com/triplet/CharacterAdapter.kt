@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.triplet.databinding.ItemCharacterBinding
 import com.triplet.models.CharacterModel
 
-class CharacterAdapter(private val characters: List<CharacterModel>) :
+class CharacterAdapter(private var characters: List<CharacterModel>) :
     RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
     class CharacterViewHolder(private val binding: ItemCharacterBinding) :
@@ -31,6 +31,11 @@ class CharacterAdapter(private val characters: List<CharacterModel>) :
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         holder.bind(characters[position])
+    }
+
+    fun updateCharacters(newCharacters: List<CharacterModel>) {
+        this.characters = newCharacters
+        notifyDataSetChanged()
     }
 
     override fun getItemCount() = characters.size

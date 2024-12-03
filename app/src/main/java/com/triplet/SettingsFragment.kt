@@ -27,7 +27,7 @@ class SettingsFragment : Fragment() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var dataStore: DataStore<Preferences>
 
-    private val fileName = "characters.txt"
+    private val fileName = "9.txt"
     private val internalFileName = "internal_characters.txt"
 
     override fun onCreateView(
